@@ -15,12 +15,14 @@ maintainers to test your changes and to keep the examples up to date for users. 
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
-| <a name="requirement_yandex"></a> [yandex](#requirement\_yandex) | >= 0.72.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
+| <a name="requirement_yandex"></a> [yandex](#requirement\_yandex) | >= 0.100.0 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_yandex"></a> [yandex](#provider\_yandex) | >= 0.100.0 |
 
 ## Modules
 
@@ -28,15 +30,26 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [yandex_api_gateway.test-api-gateway](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/api_gateway) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_api_gateway_description"></a> [api\_gateway\_description](#input\_api\_gateway\_description) | Описание API Gateway | `string` | `null` | no |
+| <a name="input_api_gateway_name"></a> [api\_gateway\_name](#input\_api\_gateway\_name) | Имя API Gateway | `string` | n/a | yes |
+| <a name="input_api_gateway_spec"></a> [api\_gateway\_spec](#input\_api\_gateway\_spec) | Спецификация OpenAPI для API Gateway | `string` | `null` | no |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_api_gateway_id"></a> [api\_gateway\_id](#output\_api\_gateway\_id) | ID созданного API Gateway |
+| <a name="output_api_gateway_name"></a> [api\_gateway\_name](#output\_api\_gateway\_name) | Имя созданного API Gateway |
+| <a name="output_api_gateway_status"></a> [api\_gateway\_status](#output\_api\_gateway\_status) | Статус созданного API Gateway |
+| <a name="output_api_gateway_url"></a> [api\_gateway\_url](#output\_api\_gateway\_url) | URL созданного API Gateway |
 <!-- END_TF_DOCS -->
 
 ## License
