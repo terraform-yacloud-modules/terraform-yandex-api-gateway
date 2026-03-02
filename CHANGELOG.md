@@ -1,3 +1,12 @@
+## v0.6.0 - 2026-03-02
+### Chores
+- 3748241 chore(deps): bump hashicorp/setup-terraform from 3 to 4
+- 1b755e1 chore(deps): bump kvendingoldo/git-flow-action from 2.2.0 to 2.16.0
+
+### Miscellaneous
+- 727654a Merge pull request [#7](https://github.com/terraform-yacloud-modules/terraform-yandex-api-gateway/pull/7) from terraform-yacloud-modules/dependabot/github_actions/hashicorp/setup-terraform-4
+- fa52e27 Merge pull request [#6](https://github.com/terraform-yacloud-modules/terraform-yandex-api-gateway/pull/6) from terraform-yacloud-modules/dependabot/github_actions/kvendingoldo/git-flow-action-2.16.0
+
 ## v0.5.0
 ## v0.4.0
 ## v0.3.0
