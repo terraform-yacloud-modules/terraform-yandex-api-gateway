@@ -1,3 +1,8 @@
+## v0.7.0 - 2026-03-15
+### Miscellaneous
+- 043cd6b Merge pull request [#8](https://github.com/terraform-yacloud-modules/terraform-yandex-api-gateway/pull/8) from terraform-yacloud-modules/custom_domains
+- 71a3710 Add labels, custom_domains, connectivity
+
 ## v0.6.0 - 2026-03-02
 ### Chores
 - 3748241 chore(deps): bump hashicorp/setup-terraform from 3 to 4
