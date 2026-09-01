@@ -1,3 +1,10 @@
+## v0.9.0 - 2026-09-01
+### Chores
+- d6bbae8 chore(deps): bump actions/cache from 5.0.5 to 6.1.0
+
+### Miscellaneous
+- deb3d97 Merge pull request [#12](https://github.com/terraform-yacloud-modules/terraform-yandex-api-gateway/pull/12) from terraform-yacloud-modules/dependabot/github_actions/actions/cache-6.1.0
+
 ## v0.8.0 - 2026-08-29
 ### Chores
 - 4c12bcf chore(deps): bump actions/cache from 5.0.3 to 5.0.5
