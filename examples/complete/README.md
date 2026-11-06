@@ -2,17 +2,34 @@
 
 Пример использования модуля со всеми опциями:
 
-- **folder_id** — каталог
+- **folder_id** — каталог (по умолчанию берётся из конфигурации провайдера)
 - **labels** — метки
 - **execution_timeout** — таймаут выполнения
-- **connectivity** — подключение к сети (private API)
-- **log_options** — логирование (log_group_id или folder_id + min_level)
+- **connectivity** — подключение к сети (private API), включается при заданном `network_id`
+- **log_options** — логирование (`log_group_id` или каталог + `min_level`)
 - **canary** — канареечный релиз (weight + variables)
 - **custom_domains** — пользовательские домены (опционально)
 
 ## Использование
 
-1. Скопируйте `terraform.tfvars.example` в `terraform.tfvars`.
-2. Заполните `folder_id` и `network_id` реальными ID (обязательно для apply).
-3. При необходимости задайте `log_group_id` и/или `custom_domains`.
-4. Выполните `terraform init`, `terraform plan`, `terraform apply`.
+```bash
+terraform init
+terraform plan
+terraform apply
+terraform destroy
+```
+
+Без переменных пример создаёт публичный API Gateway: `connectivity` не задан,
+логи пишутся в каталог с уровнем `WARN`, включён канареечный релиз с весом 10.
+
+Чтобы включить остальные возможности, скопируйте `terraform.tfvars.example` в
+`terraform.tfvars` и заполните нужные значения:
+
+- `network_id` — существующая VPC-сеть; при заданном значении API Gateway
+  становится приватным. Сеть пример не создаёт и не удаляет;
+- `log_group_id` — существующая группа логов;
+- `custom_domains` — домены с уже выпущенными сертификатами;
+- `folder_id` — если в конфигурации провайдера не задан каталог по умолчанию.
+
+Провайдер `yandex` настраивается стандартно: через переменные окружения
+(`YC_TOKEN`, `YC_FOLDER_ID`, `YC_CLOUD_ID`) или ключ сервисного аккаунта.

@@ -1,0 +1,19 @@
+# Скопируйте файл в terraform.tfvars и при необходимости заполните значения.
+
+# ID каталога. Если не задан, используется каталог из конфигурации провайдера.
+# folder_id = "b1gxxxxxxxxxxxxxxxxx"
+
+# ID существующей VPC-сети. Если задан, включается connectivity (private API).
+# network_id = "enpxxxxxxxxxxxxxxxxx"
+
+# ID существующей группы логов. Если не задан, логи пишутся в каталог с уровнем WARN.
+# log_group_id = "e23xxxxxxxxxxxxxxxxx"
+
+# Пользовательские домены (требуют выпущенного сертификата).
+# custom_domains = [
+#   {
+#     domain_id      = "d5dxxxxxxxxxxxxxxxx"
+#     fqdn           = "api.example.com"
+#     certificate_id = "fpxxxxxxxxxxxxxxxxx"
+#   }
+# ]
