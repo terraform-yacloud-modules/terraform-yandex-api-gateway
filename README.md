@@ -11,7 +11,7 @@ Terraform module для создания [Yandex API Gateway](https://cloud.yand
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
 | <a name="requirement_yandex"></a> [yandex](#requirement\_yandex) | >= 0.100.0 |
 
 ## Providers
