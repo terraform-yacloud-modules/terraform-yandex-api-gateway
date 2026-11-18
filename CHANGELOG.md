@@ -1,3 +1,7 @@
+## v0.11.0 - 2026-11-18
+### Miscellaneous
+- d0aea90 ci: run semver job only on push to main ([#14](https://github.com/terraform-yacloud-modules/terraform-yandex-api-gateway/pull/14))
+
 ## v0.10.0 - 2026-09-01
 ### Chores
 - aa70784 chore(deps): bump actions/checkout from 6 to 7
