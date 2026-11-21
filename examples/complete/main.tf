@@ -1,9 +1,11 @@
+data "yandex_client_config" "current" {}
+
 module "api_gateway" {
   source = "../../"
 
   api_gateway_name        = "complete-api-gateway"
   api_gateway_description = "Полнофункциональный пример: метки, таймаут, логи, сеть, канареечный релиз"
-  folder_id               = var.folder_id
+  folder_id               = local.folder_id
   api_gateway_spec        = local.openapi_spec
 
   labels = {
@@ -14,15 +16,13 @@ module "api_gateway" {
 
   execution_timeout = "30"
 
-  connectivity = {
-    network_id = var.network_id
-  }
+  connectivity = local.connectivity
 
   log_options = var.log_group_id != null ? {
     log_group_id = var.log_group_id
     min_level    = "INFO"
     } : {
-    folder_id = var.folder_id
+    folder_id = local.folder_id
     min_level = "WARN"
   }
 
@@ -34,6 +34,14 @@ module "api_gateway" {
 }
 
 locals {
+  folder_id = var.folder_id != null && var.folder_id != "" ? var.folder_id : data.yandex_client_config.current.folder_id
+
+  # Приватный API Gateway создаётся только при переданном network_id,
+  # поэтому пример запускается и без предварительно созданной VPC-сети.
+  connectivity = var.network_id != null && var.network_id != "" ? {
+    network_id = var.network_id
+  } : null
+
   openapi_spec = <<-EOT
 openapi: "3.0.0"
 info:
