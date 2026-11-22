@@ -1,3 +1,10 @@
+## v0.12.0 - 2026-11-22
+### Bug Fixes
+- e103b98 fix(examples): make complete example runnable without pre-created network
+
+### Miscellaneous
+- 34dac31 Merge pull request [#13](https://github.com/terraform-yacloud-modules/terraform-yandex-api-gateway/pull/13) from terraform-yacloud-modules/fix/examples-runnable
+
 ## v0.11.0 - 2026-11-18
 ### Miscellaneous
 - d0aea90 ci: run semver job only on push to main ([#14](https://github.com/terraform-yacloud-modules/terraform-yandex-api-gateway/pull/14))
