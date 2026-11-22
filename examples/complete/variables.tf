@@ -1,13 +1,13 @@
 variable "folder_id" {
-  description = "ID каталога Yandex Cloud"
+  description = "ID каталога Yandex Cloud. Если не задан, берётся из конфигурации провайдера"
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "network_id" {
-  description = "ID сети для connectivity (private API)"
+  description = "ID существующей VPC-сети для connectivity (private API). Если не задан, API Gateway создаётся публичным"
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "log_group_id" {
